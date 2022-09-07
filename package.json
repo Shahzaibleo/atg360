@@ -1,0 +1,39 @@
+{
+  "name": "electron-auto-update-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^20.1.1",
+    "electron-builder": "^23.3.3"
+  },
+  "build": {
+    "appId": "atg360",
+    "win": {
+      "executableName": "atg360",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "uninstallDisplayName": "atg360",
+      "license": "license.txt",
+      "oneClick": false,
+      "createDesktopShortcut": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Shahzaibleo/atg360.git"
+  },
+  "dependencies": {
+    "electron-updater": "^5.2.1"
+  }
+}
